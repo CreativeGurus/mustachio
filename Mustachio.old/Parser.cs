@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Web;
 
 namespace Mustachio
 {
@@ -124,7 +125,7 @@ namespace Mustachio
 
         private static string HtmlEncodeString(string context)
         {
-            return System.Net.WebUtility.HtmlEncode(context);
+            return HttpUtility.HtmlEncode(context);
         }
 
         private static Action<StringBuilder, ContextObject> HandleSingleValue(TokenPair token, ParsingOptions options, InferredTemplateModel scope )
